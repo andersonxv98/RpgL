@@ -41,9 +41,9 @@ export default class RegisterView extends React.Component{
         console.log("Código: ",this.state.cod);
         console.log("Salario: ",this.state.salary);
         const e = <Employers name={this.state.name} code ={this.state.cod} salary={this.state.salary}></Employers>;
-        const w =new EmployersView();
+        //const w =new EmployersView();
         //w.addNewEmployer(e);
-        return w;
+        //return w;
     }
     
 
@@ -90,7 +90,7 @@ export default class RegisterView extends React.Component{
             onPress={() => this.exibir()}
             title="Register"
             color="#841584"
-            accessibilityLabel="Learn more about this purple button"
+            //accessibilityLabel="Learn more about this purple button"
           />
           </SafeAreaView>)
 
