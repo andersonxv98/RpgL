@@ -1,7 +1,7 @@
 import   { StyleSheet,SafeAreaView,TextInput,Text, Button }  from "react-native";
 import React from "react";
 import EmployersView from "../Views/employersView";
-import Employers from "../Models/employer";
+import Employers from "../Models/employer.js";
 
 
 export default class RegisterView extends React.Component{
@@ -40,10 +40,11 @@ export default class RegisterView extends React.Component{
         console.log("Nome: ",this.state.name);
         console.log("Código: ",this.state.cod);
         console.log("Salario: ",this.state.salary);
-        const e = <Employers name={this.state.name} code ={this.state.cod} salary={this.state.salary}></Employers>;
-        //const w =new EmployersView();
-        //w.addNewEmployer(e);
-        //return w;
+        const e = new Employers(this.state.name, this.state.cod, this.state.salary);
+        console.log("getFrom employer Class:> ", e.getName());
+        const w =new EmployersView();
+        w.addNewEmployer(e);
+        return w;
     }
     
 
@@ -92,9 +93,12 @@ export default class RegisterView extends React.Component{
             color="#841584"
             //accessibilityLabel="Learn more about this purple button"
           />
-          </SafeAreaView>)
+          </SafeAreaView>
+          
+          
+          )
 
-
+        
         return elem;
     }
 }

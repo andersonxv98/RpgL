@@ -1,16 +1,12 @@
-import React from "react";
-
-export default class Employers extends React.Component{
-    constructor(props){
-        super(props);
-        
-        
-        this.name = props.name;
-        this.cod = props.cod;
-        this.payment= props.payment;
+export default class Employers {
+    constructor(name, cod, payment){
+        this.name = name;
+        this.cod = cod;
+        this.payment= payment;
     }
 
     getName(){
+        
         return this.name;
     }
 
